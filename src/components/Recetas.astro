@@ -1,0 +1,22 @@
+---
+
+const res = await fetch('https://frosch.cosy.sbg.ac.at/datasets/json/recipes/-/raw/main/recipes.json?ref_type=post/heads/query',
+{ headers: { ContentType: 'application/json'},})
+const data = await res.json()
+const limite = 2;
+const datosLimitados = data.slice(0, limite);
+
+console.log(datosLimitados);
+
+---
+<section>
+    {
+        datosLimitados.map((dato: { Name: unknown; Description: unknown; }) => (
+            <div>
+                <h3>{dato.Name}</h3>
+                <p>{dato.Description}</p>
+                </div>
+        ))
+    }
+</section>
+

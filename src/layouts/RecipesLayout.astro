@@ -1,0 +1,12 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+import Header from '../components/Header.astro';
+const { frontmatter } = Astro.props;
+
+---
+<Header/>
+<section class="m-auto max-w-6xl overflow-hidden relative w-full gap-4">
+<h2 class=" text-[64px]">{frontmatter.title}</h2>
+<h2 class="text-[32px]">{frontmatter.pubDate}</h2>
+<slot/>
+</section>

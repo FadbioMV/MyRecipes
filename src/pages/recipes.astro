@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import BentoGridRecipes from "../components/BentoGridRecipes.astro";
+const pageTitle = "Recipes"
+const allCollection = await getCollection("recipes")
+import BlogPosts from '../components/BlogPosts.astro'
+const allPosts = await Astro.glob('../pages/posts/*.md');
+
+---
+
+<Layout title={pageTitle}>
+    <BentoGridRecipes>
+    <ul>
+        {allPosts.map((post) => <BlogPosts url={post.url} title={post.frontmatter.title} />
+        <h3>hola</h3>
+        )}
+        {console.log(allPosts.map((post)=>post.url))}
+    </ul>
+</Layout>

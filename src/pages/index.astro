@@ -1,16 +1,46 @@
 ---
+import CardRecipes from '../components/Card/CardRecipes.astro';
+import Layout from '../layouts/Layout.astro';
+const pageTitle = "Pagina de inicio"
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title={pageTitle}>
+	<main>
+        <section class="grid grid-flow-col">
+            <div class=" container">
+                <h2>Bienvenido</h2>
+                <h1>Recetas felices, caseras y muy deliciosas</h1>
+                <p>Historias acompañadas con recetas, recetas acompañada con historias, en este lugar encontraras deliciosas experiencias.</p>
+            </div>
+            <div class="">
+                <img src="" alt="Imagen de una receta">
+            </div>
+        </section>
+        <section class="grid grid-flow-col gap-4 p-8 m-5" >
+            <div class="grid grid-flow-col gap-4">
+                <CardRecipes/>
+                <CardRecipes/>
+                <CardRecipes/>
+            </div>
+            <div class= "">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, molestias! Labore quisquam sequi mollitia, consectetur animi praesentium nesciunt ad tempora nostrum, ipsum suscipit ratione sint repellendus non, illo debitis cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo, eum reiciendis fugiat, at, assumenda rerum cumque corporis sunt distinctio architecto doloremque molestias molestiae quam blanditiis fugit dignissimos. Eaque, aliquid!</p>
+                <button type="button"><a href='recipes'>Camon</a></button>
+            </div>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, autem! Recusandae quaerat itaque totam eos sequi inventore vero adipisci eum natus rerum! Aliquid temporibus soluta blanditiis voluptate libero non cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia maxime dolorem explicabo, porro aliquid amet architecto perspiciatis, rem accusamus quas quis sequi deleniti nulla dolor. Magni, assumenda! Magni, quasi natus.</p>
+        </section>
+	</main>
+</Layout>
+
+<style>
+    main{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+
+</style>
