@@ -9,8 +9,8 @@ image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'El logotipo completo de Astro.'
 tags: ["astro", "bloguear", "aprender en público"]
-colSpan: 'md:col-span-3'
-rowSpan: "md:row-span-3"
+colSpan: 'md:col-span-1'
+rowSpan: "md:row-span-6"
 ---
 # Mi primera publicación en el blog
 Todos hemos pasado por ese momento del día donde debemos levantarnos de la cama o del sofá y preguntarnos ¿Qué voy a comer? Y no tener ni idea de cómo responder esa pregunta, y además, no tener la más mínima intención de dejar de hacer lo que sea que estemos haciendo porque requiere salir de la comodidad para estar de pie, picando, calentando, fritando, teniendo en mente que más te vas a demorar cocinando y que comiendo.

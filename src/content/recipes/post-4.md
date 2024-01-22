@@ -10,6 +10,8 @@ image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'El logotipo completo de Astro.'
 tags: ["astro", "bloguear", "aprender en público"]
+colSpan: 'md:col-span-2'
+rowSpan: "md:row-span-6"
 ---
 # Mi primera publicación en el blog
 

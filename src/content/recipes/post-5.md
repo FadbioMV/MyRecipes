@@ -9,7 +9,10 @@ author: 'Alumno de Astro'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'El logotipo completo de Astro.'
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "bloguear", "aprender en público", "otro"]
+colSpan: 'md:col-span-1'
+rowSpan: "md:row-span-5"
+
 ---
 # Mi primera publicación en el blog
 

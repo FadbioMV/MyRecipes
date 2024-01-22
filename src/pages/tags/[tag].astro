@@ -25,7 +25,6 @@ const { posts } = Astro.props;
   <p>Entradas etiquetadas con {tag}</p>
   <ul>
     {posts.map((post) => <BlogPosts url={post.slug} title={post.data.title}/>)}
-
   </ul>
 
 </BaseLayout>
