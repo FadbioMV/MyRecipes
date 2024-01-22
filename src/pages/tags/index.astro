@@ -1,13 +1,15 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-const allPosts = await Astro.glob('../posts/*.md');
-const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+import CardRecipes from '../../components/Card/CardRecipes.astro';
+const allPosts = await getCollection("recipes")
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 const pageTitle = "Índice de etiquetas";
 ---
 <Layout title={pageTitle}>
   <div class="tags">
     {tags.map((tag) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+      <CardRecipes><a href={`/tags/${tag}`}>{tag}</a></CardRecipes>
     ))}
   </div>
 </Layout>

@@ -1,46 +1,46 @@
 ---
 import CardRecipes from '../components/Card/CardRecipes.astro';
+import TitleWebSite from '../components/TitleWebSite.astro';
 import Layout from '../layouts/Layout.astro';
+import Welcome from '../components/Welcome.astro'
+import Greeting from '../components/Greeting';
 const pageTitle = "Pagina de inicio"
 
 ---
 
 <Layout title={pageTitle}>
 	<main>
-        <section class="grid grid-flow-col">
-            <div class=" container">
-                <h2>Bienvenido</h2>
-                <h1>Recetas felices, caseras y muy deliciosas</h1>
-                <p>Historias acompañadas con recetas, recetas acompañada con historias, en este lugar encontraras deliciosas experiencias.</p>
-            </div>
-            <div class="">
-                <img src="" alt="Imagen de una receta">
-            </div>
-        </section>
-        <section class="grid grid-flow-col gap-4 p-8 m-5" >
-            <div class="grid grid-flow-col gap-4">
-                <CardRecipes/>
-                <CardRecipes/>
-                <CardRecipes/>
-            </div>
-            <div class= "">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, molestias! Labore quisquam sequi mollitia, consectetur animi praesentium nesciunt ad tempora nostrum, ipsum suscipit ratione sint repellendus non, illo debitis cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo, eum reiciendis fugiat, at, assumenda rerum cumque corporis sunt distinctio architecto doloremque molestias molestiae quam blanditiis fugit dignissimos. Eaque, aliquid!</p>
-                <button type="button"><a href='recipes'>Camon</a></button>
-            </div>
-        </section>
-        <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, autem! Recusandae quaerat itaque totam eos sequi inventore vero adipisci eum natus rerum! Aliquid temporibus soluta blanditiis voluptate libero non cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia maxime dolorem explicabo, porro aliquid amet architecto perspiciatis, rem accusamus quas quis sequi deleniti nulla dolor. Magni, assumenda! Magni, quasi natus.</p>
-        </section>
+        <div class="mx-auto ">
+            <TitleWebSite/>
+        </div>
+        <div class="m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-8 lg:grid-cols-5 lg:gap-4 ">
+                <CardRecipes colSpan='md:col-span-3' rowSpan='md:row-span-9'>
+                    <h2>Una historia para cada receta</h2>
+                </CardRecipes>
+                <CardRecipes colSpan='md:col-span-2' rowSpan='md:row-span-5'title="Welcome"> 
+                    <Welcome/>
+                </CardRecipes>
+                <CardRecipes colSpan='md:col-span-1' rowSpan='md:row-span-4'>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, temporibus.</p>
+                </CardRecipes>
+                <CardRecipes colSpan='md:col-span-1' rowSpan='md:row-span-4'>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, temporibus.</p>
+                </CardRecipes>
+                <CardRecipes colSpan='md:col-span-1' rowSpan='md:row-span-4'>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, temporibus.</p>
+                </CardRecipes>
+                <CardRecipes colSpan='md:col-span-1' rowSpan='md:row-span-4'>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, temporibus.</p>
+                </CardRecipes>
+                <CardRecipes colSpan='md:col-span-1' rowSpan='md:row-span-4'>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, temporibus.</p>
+                </CardRecipes>
+                <Greeting client:load messages={["1", "2","3","4"]}/>
+                <CardRecipes colSpan='md:col-span-1' rowSpan='md:col-span-5' >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi veritatis sequi soluta ea reprehenderit, adipisci maxime quasi, odit ut laborum doloremque minima asperiores aliquam cumque ipsum magni est et recusandae itaque sint vel! Id doloribus saepe voluptates eveniet corporis reiciendis sint, facilis aut, magni repellat nam ab rerum nesciunt laborum voluptatibus perspiciatis tenetur et odio fugit recusandae aperiam? Labore dignissimos autem vitae, repellendus ab deserunt iusto eaque eum enim consectetur saepe hic, temporibus quis earum unde quisquam doloremque. Pariatur, reprehenderit necessitatibus perferendis temporibus porro totam ab qui quae obcaecati, provident culpa dolore. Voluptates nam libero recusandae ut illo molestias beatae.</CardRecipes>
+        </div>
 	</main>
 </Layout>
 
 <style>
-    main{
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-    h1 {
-        font-size: 3rem;
-    }
 
 </style>

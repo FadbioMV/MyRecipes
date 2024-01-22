@@ -10,7 +10,7 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
 <Layout title={pageTitle}>
-    <BentoGridRecipes>
+    <BentoGridRecipes/>
     <ul>
         {allPosts.map((post) => <BlogPosts url={post.url} title={post.frontmatter.title} />
         <h3>hola</h3>
